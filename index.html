@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil | Muhammad Taufiq Al Fauzi</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    /* Navbar custom hover */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+      color: #e0e7ef;
+      font-weight: 500;
+      padding: 0.5rem 1.2rem;
+      border-radius: 0.75rem;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2596be, #145369);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      z-index: 2;
+    }
+    .nav-link:hover {
+      color: #fff;
+      background: rgba(37,150,190,0.18);
+      box-shadow: 0 4px 24px 0 rgba(37,150,190,0.10);
+      transform: scale(1.08) translateY(-2px);
+      text-shadow: 0 2px 8px rgba(4,16,20,0.18);
+    }
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+<body class="min-h-screen pattern-dots relative">
+  <!-- Animated background elements (dari App.vue) -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <!-- Floating circles, shapes, lines, dots, grid, corner decorations -->
+    <!-- ... (copy dari App.vue, bisa disesuaikan) ... -->
+  </div>
+  <div class="relative z-10">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 shadow-lg bg-white/20 backdrop-blur-md border-b border-[#2596be]/30 animate-fade-in-up">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-[#2596be] drop-shadow-lg animate-slide-in-left relative group tracking-wide">
+          <span class="relative z-10">Fauzi</span>
+        </div>
+        <ul class="flex space-x-4 md:space-x-8">
+          <li><a href="#profil" class="nav-link">Profil</a></li>
+          <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
+          <li><a href="#skill" class="nav-link">Skill</a></li>
+          <li><a href="#proyek" class="nav-link">Proyek</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section id="profil" class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center min-h-screen relative">
+        <!-- ... (copy struktur Hero.vue, gambar di assets/pp.JPEG) ... -->
+      </section>
+      <!-- Education Section -->
+      <section id="pendidikan" class="py-20 bg-white/5 backdrop-blur-sm relative">
+        <!-- ... (copy struktur Education.vue, data statis di JS) ... -->
+      </section>
+      <!-- Skills Section -->
+      <section id="skill" class="py-20 bg-white/5 backdrop-blur-sm relative">
+        <!-- ... (copy struktur Skills.vue, data statis di JS) ... -->
+      </section>
+      <!-- Projects Section -->
+      <section id="proyek" class="py-20 bg-white/5 backdrop-blur-sm relative">
+        <!-- ... (copy struktur Projects.vue, data statis di JS) ... -->
+      </section>
+      <!-- Contact Section -->
+      <footer id="kontak" class="py-20 bg-[#041014] text-white relative">
+        <!-- ... (copy struktur Contact.vue) ... -->
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 
