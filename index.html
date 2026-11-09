@@ -2,94 +2,333 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil | Muhammad Taufiq Al Fauzi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Portfolio Muhammad Taufiq Al Fauzi, fresh graduate Informatika predikat cum laude dengan minat pada full-stack web development dan machine learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Taufiq Al Fauzi — Portfolio">
+  <meta property="og:description" content="Fresh graduate Informatika predikat cum laude dengan pengalaman web development, asistensi praktikum, dan proyek machine learning.">
+  <title>Muhammad Taufiq Al Fauzi — Portfolio</title>
   <link rel="icon" href="assets/favicon.ico">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    /* Navbar custom hover */
-    .nav-link {
-      position: relative;
-      transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
-      color: #e0e7ef;
-      font-weight: 500;
-      padding: 0.5rem 1.2rem;
-      border-radius: 0.75rem;
-      z-index: 1;
-      overflow: hidden;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0; right: 0; bottom: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #2596be, #145369);
-      border-radius: 2px;
-      transform: scaleX(0);
-      transition: transform 0.3s;
-      z-index: 2;
-    }
-    .nav-link:hover {
-      color: #fff;
-      background: rgba(37,150,190,0.18);
-      box-shadow: 0 4px 24px 0 rgba(37,150,190,0.10);
-      transform: scale(1.08) translateY(-2px);
-      text-shadow: 0 2px 8px rgba(4,16,20,0.18);
-    }
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
-<body class="min-h-screen pattern-dots relative">
-  <!-- Animated background elements (dari App.vue) -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <!-- Floating circles, shapes, lines, dots, grid, corner decorations -->
-    <!-- ... (copy dari App.vue, bisa disesuaikan) ... -->
-  </div>
-  <div class="relative z-10">
-    <!-- Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 shadow-lg bg-white/20 backdrop-blur-md border-b border-[#2596be]/30 animate-fade-in-up">
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold text-[#2596be] drop-shadow-lg animate-slide-in-left relative group tracking-wide">
-          <span class="relative z-10">Fauzi</span>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Navigasi utama">
+      <a class="brand" href="#profil" aria-label="Muhammad Taufiq Al Fauzi, halaman utama">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>Fauzi<span class="brand-period">.</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Buka navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navigation-links" id="primary-menu">
+        <li><a class="nav-link" href="#tentang">Tentang</a></li>
+        <li><a class="nav-link" href="#keahlian">Keahlian</a></li>
+        <li><a class="nav-link" href="#proyek">Proyek</a></li>
+        <li><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
+        <li><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+        <li><a class="nav-link nav-contact" href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="konten">
+    <section class="hero section-wrap" id="profil" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Fresh Graduate Informatika · Cum Laude</p>
+        <h1 id="hero-title">Halo, saya <span>Muhammad Taufiq Al Fauzi.</span></h1>
+        <p class="hero-summary">Lulusan Informatika Universitas Amikom Yogyakarta dengan predikat cum laude pada 31 Agustus 2026. Saya berfokus pada full-stack web development dan tertarik menerapkan machine learning untuk analisis sentimen.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyek">
+            Lihat Proyek
+            <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5"/></svg>
+          </a>
+          <a class="button button-secondary" href="#kontak">Hubungi Saya</a>
         </div>
-        <ul class="flex space-x-4 md:space-x-8">
-          <li><a href="#profil" class="nav-link">Profil</a></li>
-          <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
-          <li><a href="#skill" class="nav-link">Skill</a></li>
-          <li><a href="#proyek" class="nav-link">Proyek</a></li>
-          <li><a href="#kontak" class="nav-link">Kontak</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero Section -->
-      <section id="profil" class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center min-h-screen relative">
-        <!-- ... (copy struktur Hero.vue, gambar di assets/pp.JPEG) ... -->
-      </section>
-      <!-- Education Section -->
-      <section id="pendidikan" class="py-20 bg-white/5 backdrop-blur-sm relative">
-        <!-- ... (copy struktur Education.vue, data statis di JS) ... -->
-      </section>
-      <!-- Skills Section -->
-      <section id="skill" class="py-20 bg-white/5 backdrop-blur-sm relative">
-        <!-- ... (copy struktur Skills.vue, data statis di JS) ... -->
-      </section>
-      <!-- Projects Section -->
-      <section id="proyek" class="py-20 bg-white/5 backdrop-blur-sm relative">
-        <!-- ... (copy struktur Projects.vue, data statis di JS) ... -->
-      </section>
-      <!-- Contact Section -->
-      <footer id="kontak" class="py-20 bg-[#041014] text-white relative">
-        <!-- ... (copy struktur Contact.vue) ... -->
-      </footer>
-    </main>
-  </div>
-  <script src="script.js"></script>
+        <a class="text-link hero-social" href="https://github.com/Fauzi-Taufiq/" target="_blank" rel="noopener noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img src="assets/pp.JPEG" alt="Foto Muhammad Taufiq Al Fauzi" width="420" height="520">
+        </div>
+        <div class="portrait-caption">
+          <span class="caption-line" aria-hidden="true"></span>
+          <span>Informatika · Cum Laude · 2026</span>
+        </div>
+        <span class="hero-index" aria-hidden="true">01 / PORTFOLIO</span>
+      </div>
+    </section>
+
+    <section class="content-section about-section" id="tentang" aria-labelledby="about-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="eyebrow">01 — Tentang</p>
+          <h2 id="about-title">Teknologi yang berguna, dibuat dengan tujuan.</h2>
+        </div>
+        <div class="about-copy">
+          <p>Saya fresh graduate S1 Informatika dari Universitas Amikom Yogyakarta, lulus pada 31 Agustus 2026 dengan predikat cum laude. Sebelumnya, saya menempuh Rekayasa Perangkat Lunak di SMK Negeri 1 Bantul Yogyakarta.</p>
+          <p>Pengalaman saya meliputi pengembangan website, asistensi praktikum pemrograman, serta proyek akademik machine learning dan UI/UX. Saya tertarik membangun solusi digital yang fungsional dan mudah digunakan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section skills-section" id="keahlian" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">02 — Keahlian</p>
+          <h2 id="skills-title">Teknologi yang saya gunakan.</h2>
+          <p class="section-intro">Keahlian pengembangan, machine learning, dan perangkat pendukung.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-group">
+            <span class="skill-number">01</span>
+            <h3>Frontend Development</h3>
+            <ul class="tag-list">
+              <li>ReactJS</li>
+              <li>NextJS</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <span class="skill-number">02</span>
+            <h3>Backend Development</h3>
+            <ul class="tag-list">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>Database Management</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <span class="skill-number">03</span>
+            <h3>Data &amp; Machine Learning</h3>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Analisis Sentimen</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <span class="skill-number">04</span>
+            <h3>Tools &amp; Workflow</h3>
+            <ul class="tag-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Figma</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <span class="skill-number">05</span>
+            <h3>Keahlian Pendukung</h3>
+            <ul class="tag-list">
+              <li>UI/UX</li>
+              <li>Desain Grafis</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section projects-section" id="proyek" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">03 — Proyek pilihan</p>
+          <h2 id="projects-title">Beberapa hal yang telah saya bangun.</h2>
+          <p class="section-intro">Proyek pengembangan web, machine learning, dan perancangan UI/UX.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-visual project-visual-nexakun">
+              <img src="assets/nexakun-logo.png" alt="Logo Nexakun" width="420" height="220" loading="lazy">
+              <span class="project-count">PROJECT / 01</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type">E-commerce · Web</p>
+              <h3>Website Toko Akun Game Online</h3>
+              <p>Aplikasi jual-beli akun game online yang dibangun menggunakan Laravel, dengan integrasi Midtrans dalam mode demo untuk proses pembayaran.</p>
+              <ul class="tag-list project-tags" aria-label="Teknologi yang digunakan">
+                <li>Laravel</li>
+                <li>Midtrans (Demo)</li>
+              </ul>
+              <a class="text-link project-link" href="https://github.com/Fauzi-Taufiq/nexakun-accountstore" target="_blank" rel="noopener noreferrer">
+                Lihat repository <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual project-visual-movietix">
+              <img src="assets/movietix.png" alt="Logo Movietix" width="420" height="220" loading="lazy">
+              <span class="project-count">PROJECT / 02</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type">Pemesanan tiket · Web</p>
+              <h3>Website Penjualan Tiket Bioskop</h3>
+              <p>Website penjualan tiket bioskop dengan fitur pemesanan dan pembayaran online.</p>
+              <ul class="tag-list project-tags" aria-label="Teknologi yang digunakan">
+                <li>PHP</li>
+                <li>MySQL (phpMyAdmin)</li>
+              </ul>
+              <a class="text-link project-link" href="https://github.com/Fauzi-Taufiq/movietix" target="_blank" rel="noopener noreferrer">
+                Lihat repository <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual project-visual-thesis">
+              <div class="project-art" aria-hidden="true">
+                <span class="project-art-label">THESIS / MACHINE LEARNING</span>
+                <span class="project-art-title">Brawl<br>Stars</span>
+                <span class="project-art-metric">86% <small>akurasi</small></span>
+              </div>
+              <span class="project-count">PROJECT / 03</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type">Skripsi · Machine Learning</p>
+              <h3>Analisis Sentimen Ulasan Game Brawl Stars Menggunakan Algoritma Random Forest</h3>
+              <p>Menganalisis sentimen ulasan game Brawl Stars menggunakan algoritma Random Forest, dengan akurasi 86%.</p>
+              <ul class="tag-list project-tags" aria-label="Teknologi dan metode yang digunakan">
+                <li>Python</li>
+                <li>Random Forest</li>
+                <li>Analisis Sentimen</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual project-visual-uiux">
+              <div class="project-art" aria-hidden="true">
+                <span class="project-art-label">ACADEMIC PROJECT / UI/UX</span>
+                <span class="uiux-panels"><span></span><span></span><span></span></span>
+                <span class="project-art-title">Designing<br>useful experiences</span>
+              </div>
+              <span class="project-count">PROJECT / 04</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type">Proyek akademik · UI/UX</p>
+              <h3>Desain UI/UX Sistem Digital</h3>
+              <p>Merancang UI/UX untuk dua konsep: sistem donasi streamer yang terinspirasi Saweria dan sistem pemesanan kamar untuk satu hotel.</p>
+              <ul class="tag-list project-tags" aria-label="Keahlian yang digunakan">
+                <li>UI/UX</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section experience-section" id="pengalaman" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">04 — Pengalaman &amp; Sertifikasi</p>
+          <h2 id="experience-title">Pengalaman profesional.</h2>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-meta">
+              <p class="education-period">Feb 2025 — Jul 2025</p>
+              <span class="experience-type">Asisten Praktikum</span>
+            </div>
+            <div class="experience-description">
+              <h3>Forum Asisten Amikom Sleman</h3>
+              <ul>
+                <li>Membimbing praktikum Pemrograman Lanjut, Pemrograman Web, dan Pemrograman Basis Data.</li>
+                <li>Menjelaskan konsep teknis dan membantu mahasiswa mendiagnosis serta memperbaiki kesalahan kode.</li>
+                <li>Berkoordinasi dengan dosen dan sesama asisten terkait materi, jadwal, dan penilaian.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-meta">
+              <p class="education-period">Jun 2021 — Nov 2021</p>
+              <span class="experience-type">PKL · FullStack</span>
+            </div>
+            <div class="experience-description">
+              <h3>PT Global Intermedia Nusantara Yogyakarta</h3>
+              <ul>
+                <li>Membangun dan mengembangkan website profil untuk klien perusahaan.</li>
+                <li>Menguji dan mengonfigurasi website agar fitur berjalan sesuai kebutuhan klien.</li>
+                <li>Menyusun dokumentasi teknis dan mengikuti standar mutu perusahaan.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="certifications">
+          <h3>Sertifikasi</h3>
+          <ul class="certification-list">
+            <li><span>Cisco Networking Academy</span></li>
+            <li><span>Sertifikat Kompetensi Praktik Kerja Lapangan (PKL)</span><span>PT Global Intermedia Nusantara · 2021</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section education-section" id="pendidikan" aria-labelledby="education-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="eyebrow">05 — Pendidikan</p>
+          <h2 id="education-title">Landasan perjalanan saya.</h2>
+        </div>
+        <div class="education-list">
+          <article class="education-item">
+            <p class="education-period">2022 — 31 Agustus 2026</p>
+            <div>
+              <h3>Universitas Amikom Yogyakarta</h3>
+              <p>S1 — Informatika · Cum Laude</p>
+            </div>
+          </article>
+          <article class="education-item">
+            <p class="education-period">2019 — 2022</p>
+            <div>
+              <h3>SMK Negeri 1 Bantul Yogyakarta</h3>
+              <p>Rekayasa Perangkat Lunak</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontak" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <p class="eyebrow">06 — Kontak</p>
+        <h2 id="contact-title">Mari terhubung.</h2>
+        <p>Terbuka untuk terhubung dan berbincang tentang pengembangan web.</p>
+        <a class="button button-light" href="https://github.com/Fauzi-Taufiq/" target="_blank" rel="noopener noreferrer">
+          Kunjungi GitHub
+          <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#profil">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>Fauzi<span class="brand-period">.</span></span>
+      </a>
+      <p>© <span id="current-year"></span> Muhammad Taufiq Al Fauzi</p>
+      <a class="footer-social" href="https://github.com/Fauzi-Taufiq/" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
 </body>
-</html> 
+</html>
